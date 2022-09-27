@@ -35,12 +35,13 @@ submitBtn.addEventListener("click", function() {
 
     console.log(count)
 
+    let date = new Date()
     const resultElement = document.createElement('ion-card')
-    resultElement.innerHTML = ``
     resultElement.innerHTML = `    
     <ion-card-header>
         <ion-card-title>Quiz Result: ${count}/5</ion-card-title>
-        <ion-card-subtitle>Have a great day!</ion-card-subtitle>
+        <ion-card-subtitle>Date Submitted: ${date.getFullYear()+"-"+(date.getMonth()+1)+"-"+ date.getDate()+" "+date.getHours()+":"+date.getMinutes()+":"+ date.getSeconds()}</ion-card-subtitle>
+        <ion-card-content>Have a great day!</ion-card-content>
     </ion-card-header>    
     `
     resultScore.appendChild(resultElement)
