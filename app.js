@@ -25,6 +25,7 @@ submitBtn.addEventListener("click", function() {
 
     if (answerOne.value === '' || answerTwo.value === '' || answerThree.value === '' || answerFour.value === '' || answerFive.value === '') {
         presentAlert()
+        return
     } else {
         for (let i = 0; i < quizAnswers.length; i++) {
             if (quizAnswers[i] === answers [i])
@@ -35,6 +36,7 @@ submitBtn.addEventListener("click", function() {
     console.log(count)
 
     const resultElement = document.createElement('ion-card')
+    resultElement.innerHTML = ``
     resultElement.innerHTML = `    
     <ion-card-header>
         <ion-card-title>Quiz Result: ${count}/5</ion-card-title>
