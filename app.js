@@ -1,0 +1,1 @@
+const submitBtn = document.querySelector('ion-button')
